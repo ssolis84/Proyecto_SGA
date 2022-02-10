@@ -17,4 +17,18 @@ public class Controlador {
     Estudiante estudiante= new Estudiante(this);
     Loggin loggin= new Loggin(this);
     
+    public void mostrarAdministrador(){
+        administrador.setVisible(true);
+    }
+    
+    public void mostrarEstudiante(){
+        estudiante.setVisible(true);
+    }
+    
+    public void mostrarLoggin(){
+        loggin.setVisible(true);
+    }
+    
+            
+    
 }

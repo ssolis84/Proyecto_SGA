@@ -5,13 +5,17 @@
  */
 package ec.edu.intsuperior.vista;
 
+import ec.edu.intsuperior.controlador.Controlador;
+
+
 /**
  *
  * @author Santiago
  */
 public class Aplicacion {
     public static void main(String[] args) {
-        
+        Controlador c=new Controlador();
+        c.mostrarLoggin();
     }
     
 }
