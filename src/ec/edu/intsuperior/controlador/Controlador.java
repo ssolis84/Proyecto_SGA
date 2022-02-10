@@ -16,6 +16,11 @@ public class Controlador {
     Administrador administrador=new Administrador(this);
     Estudiante estudiante= new Estudiante(this);
     Loggin loggin= new Loggin(this);
+    Docente docente=new Docente(this);
+    
+    public void mostrarDocente(){
+        docente.setVisible(true);
+    }
     
     public void mostrarAdministrador(){
         administrador.setVisible(true);

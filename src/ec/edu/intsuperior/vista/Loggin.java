@@ -136,12 +136,17 @@ public class Loggin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
+
+
         if (cbxModo.getSelectedItem().toString().equals("Administrador")) {
             controlador.mostrarAdministrador();
             } 
         if (cbxModo.getSelectedItem().toString().equals("Estudiante")) {
             controlador.mostrarEstudiante();
             
+        }
+        if (cbxModo.getSelectedItem().toString().equals("Docente")){
+            controlador.mostrarDocente();
         }
 
         // TODO add your handling code here:
