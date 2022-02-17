@@ -34,6 +34,15 @@ public class Controlador {
         loggin.setVisible(true);
     }
     
-            
+    
+    //DDL: LENGUAJE DE DEFINICION DE DATOS (CREATE, ALTER, DROP)
+    
+    //DML: LENGUAJE DE MANIPULACION DE DATOS (SELECT, DELETE, UPDATE, INSERT)
+    
+    //CRUD
+    //CREATE
+    //READ
+    //UPDATE
+    //DELETE
     
 }

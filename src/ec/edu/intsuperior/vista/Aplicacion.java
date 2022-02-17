@@ -5,6 +5,7 @@
  */
 package ec.edu.intsuperior.vista;
 
+import ec.edu.intsuperior.controlador.Conexion;
 import ec.edu.intsuperior.controlador.Controlador;
 
 
@@ -14,8 +15,7 @@ import ec.edu.intsuperior.controlador.Controlador;
  */
 public class Aplicacion {
     public static void main(String[] args) {
-        Controlador c=new Controlador();
-        c.mostrarLoggin();
+        Conexion.getConexion();
     }
     
 }

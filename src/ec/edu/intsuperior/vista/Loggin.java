@@ -55,8 +55,6 @@ public class Loggin extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
         jLabel4.setText("Clave:");
 
-        cbxModo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Docente", "Estudiante" }));
-
         btnIngresar.setBackground(new java.awt.Color(102, 102, 255));
         btnIngresar.setFont(new java.awt.Font("Sylfaen", 1, 14)); // NOI18N
         btnIngresar.setText("Ingresar al sistema");
