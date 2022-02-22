@@ -27,7 +27,7 @@ public class Conexion {
         }
         return conexion;
     }
-
+    
     public static void closeConexion(){
         try {
             getConexion().close();
@@ -36,4 +36,7 @@ public class Conexion {
             System.out.println(e.getMessage());
         }
     }
+    
+    
+    
 }
