@@ -6,6 +6,10 @@
 package ec.edu.intsuperior.controlador;
 
 import ec.edu.intsuperior.vista.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -34,15 +38,43 @@ public class Controlador {
         loggin.setVisible(true);
     }
     
+    public void llenarDatosModo(JComboBox cbxCombo){
+        String consultaModo="select * from tipo_usuario order by tipo asc";
+        
+        try {
+            PreparedStatement pst= Conexion.getConexion().prepareStatement(consultaModo);
+            ResultSet result = pst.executeQuery();
+            cbxCombo.addItem("Seleccione una opción");
+            while (result.next()) {   
+                cbxCombo.addItem(result.getString("tipo"));
+                
+            }
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+           Conexion.closeConexion();
+        
+        
+    }
     
-    //DDL: LENGUAJE DE DEFINICION DE DATOS (CREATE, ALTER, DROP)
-    
-    //DML: LENGUAJE DE MANIPULACION DE DATOS (SELECT, DELETE, UPDATE, INSERT)
-    
-    //CRUD
-    //CREATE
-    //READ
-    //UPDATE
-    //DELETE
+    public boolean consultaUsuario(String user){
+       String consultaUsuario="select nombre_usuario from usuario ";
+       boolean ok=false;
+        try {
+            PreparedStatement pst= Conexion.getConexion().prepareStatement(consultaUsuario);
+            ResultSet result = pst.executeQuery();
+            while (result.next()) {
+                if(user.equals(result.getString("nombre_usuario")))
+                    ok=true;
+                
+            }
+        } catch (SQLException e) {
+                 System.out.println(e.getMessage());
+        }
+        Conexion.closeConexion();
+     
+        return ok;
+    }
     
 }
